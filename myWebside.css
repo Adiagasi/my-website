@@ -1,0 +1,573 @@
+/* Top Navigation Bar */
+/* Custom Navbar Styles */
+.custom-navbar {
+  background-color: #E6E6FA; /* Light lavender */
+  padding: 1rem 0;
+  height: 12%; /* Adjust the height */
+}
+
+/* Styling navbar links */
+.nav-links a {
+  color: black;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #626286; /* Purple hover effect */
+  transform: scale(1.1);
+}
+
+/* Logo styling */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 992px) {
+  /* When navbar is collapsed */
+  .navbar-collapse {
+    background-color: #E6E6FA; /* Light purple background */
+    position: absolute;
+    top: 100%; /* Places the expanded navbar just below the button */
+    left: 0;
+    width: 100%; /* Make it full width */
+    display: none; /* Initially hidden */
+  }
+
+  /* Show navbar when toggled */
+  .navbar-collapse.show {
+    display: block;
+  }
+
+  /* Adjust navbar-toggler button for small screens */
+  .navbar-toggler {
+    display: block;
+  }
+
+  /* Adjust the logo for smaller screens */
+  .logo {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* חלק הרקע */
+.background-img {
+  background: url('https://img.freepik.com/free-vector/white-with-low-poly-network-connection_1017-29753.jpg?t=st=1734867436~exp=1734871036~hmac=08a739b9784c9759cbee0befcff522ba3083c056f099576377c6aa00362ff3e0&w=900');
+  background-size: cover;
+  background-position: center;
+  height: 120vh; /* גובה מלא למסך */
+  padding-top: 120px; /* מרווח מתחת לניווט */
+  display: flex; /* מרכזת את התוכן עם Flexbox */
+  justify-content: center; /* מרכזת בצורה אופקית */
+  align-items: flex-start; /* מתחיל מהחלק העליון */
+}
+
+/* כרטיס פרופיל */
+.profile-card {
+  position: relative;
+  margin-top: 20px; /* רווח בין הכרטיס לרקע */
+  width: 800px; /* רוחב הכרטיס */
+  height: auto; /* גובה אוטומטי */
+  border-radius: 15px; /* פינות מעוגלות */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* צל */
+  background-color: rgba(230, 230, 250, 0.9); /* צבע רקע עם שקיפות */
+  padding: 20px; /* מרווח פנימי */
+  text-align: center; /* מרכז את התוכן בטקסט */
+  transition: all 0.3s ease; /* מעבר חלק */
+}
+
+/* תמונת פרופיל */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover; /* מוודא שהתמונה ממלאת את התיבה */
+  border-radius: 50%; /* תמונה עגולה */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* צל קל */
+  margin-bottom: 20px;
+}
+
+/* פרטים אישיים */
+.list-unstyled {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+/* התאמות למסכים קטנים */
+@media (max-width: 768px) {
+  .background-img {
+    height: auto; /* התאמת גובה למסכים קטנים */
+    padding-top: 80px; /* מרווח קטן יותר מתחת לניווט */
+  }
+
+  .profile-card {
+    margin-top: 40px; /* רווח מוגדל בין הכרטיס לסרגל */
+    width: 90%; /* תופס את רוב רוחב המסך */
+    padding: 15px; /* מרווח פנימי קטן יותר */
+  }
+
+  .profile-img {
+    width: 120px; /* תמונה קטנה יותר למסכים קטנים */
+    height: 120px;
+  }
+}
+
+
+/* About Me Section */
+.about-me-section {
+    background-color: #f9f9f9;
+  }
+  
+  .about-me-section h2 {
+    color: #535370;
+    font-weight: bold;
+  }
+  
+  .about-me-section p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+  }
+
+  h2 {
+    display: flex; /* משתמש ב-flexbox */
+    align-items: center; /* ממרכז אנכית את הטקסט והאייקון */
+    justify-content: center; /* ממרכז את כל הקבוצה אופקית */
+    text-align: center; /* מרכז את הטקסט */
+  }
+  
+  ion-icon {
+    font-size: 2rem; /* מגדיר את גודל האייקון */
+    margin-left: 8px; /* מוסיף מרווח בין הטקסט לאייקון */
+  }
+
+  .text-center {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 2em;
+    color: #1a1a1a;
+  }
+  
+  /* Timeline container */
+/* Timeline container */
+.timeline {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.timeline-year .years {
+    font-size: 18px; /* שנה את הערך בהתאם לגודל הרצוי */
+    color: #626286; /* אופציונלי: הוסף צבע כהה יותר לטקסט */
+    font-weight: normal; /* אופציונלי: שנה את משקל הפונט */
+}
+
+/* Vertical center line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #ddd;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-year {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.timeline-year .years {
+    font-size: 18px;
+    color: #626286;
+    margin: 0;
+}
+
+.timeline-year .role {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+
+
+}
+
+/* Center flower icon column */
+.timeline-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1;
+    left: -3px; /* הוסף את זה כדי להזיז את האייקון 5 פיקסלים שמאלה */
+    
+}
+
+.timeline-icon ion-icon {
+    font-size: 20px;
+    color: #626286;
+    padding: 5px;
+    margin-top: 5px;
+    
+}
+
+.timeline-content {
+    padding-left: 20px;
+}
+
+.company-name {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.timeline-content ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.timeline-content li {
+    margin-bottom: 12px;
+    color: #444;
+}
+
+/* Title spacing */
+#experience h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 60px 1fr;
+        padding-left: 0;
+    }
+    
+    .timeline-year {
+        grid-column: 2;
+        text-align: left;
+        padding-right: 0;
+        padding-left: 20px;
+    }
+
+    .timeline-icon {
+        grid-column: 1;
+        grid-row: span 2;
+    }
+
+  
+     
+
+
+    .timeline-content {
+        grid-column: 2;
+        padding-left: 20px;
+    }
+}
+
+#education h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#skills h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .root {
+    background: #2c3e50;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .branches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .branch {
+    background: rgba(250, 235, 215, 0.2); /* בז שקוף */
+    transition: background-color 0.1s;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 250px;
+  }
+  
+  .branch-title {
+    background: #E6E6FA;
+    color: rgb(9, 9, 9);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skill img {
+    width: 45px;
+    height:45px;
+  }
+  .wide-image {
+    width: 70px; /* רוחב מותאם אישית לתמונה הספציפית */
+    height: 85px; /* שמירה על פרופורציות */
+  }
+  .skill-name {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  
+  #contact {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1000px;
+    position: relative;
+    margin-top: 60px; /* מרווח נוסף מהכותרת */
+}
+
+/* Form styling */
+.contact-form {
+    flex: 0 0 450px;
+    padding-right: 60px;
+    margin-bottom: 50px;
+     top: 40px; /* תזוזה למטה */
+}
+
+.contact-form h3 {
+    color: #626286; /* Purple hover effect */;
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 25px;
+    border: 1px solid #070707;
+    background: white;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+  height: 100px;  /* גובה קבוע */
+  resize: none;   /* מבטל את האפשרות להזיז */
+  overflow-y: auto;  /* מוסיף סרגל גלילה אנכי כשצריך */
+  margin-bottom: 25px;
+  border: 1px solid #070707;
+  background: white;
+  font-size: 14px;
+  padding: 8px;
+}
+
+.contact-form button {
+  background-color: #626286; /* צבע רקע סגול לכפתור */
+  color: white;  /* צבע הטקסט בלבן */
+  padding: 10px 20px;  /* ריפוד פנימי של 10 פיקסלים מלמעלה ומלמטה ו-20 פיקסלים משני הצדדים */
+  border: 1px solid #070707;  /* ביטול הגבול של הכפתור */
+  cursor: pointer;  /* שינוי הסמן לכדי יד כדי לציין שהכפתור לחיץ */
+  font-size: 14px;  /* גודל הפונט 14 פיקסלים */
+  width: 100%;  /* גורם לכפתור לתפוס את כל הרוחב של האלמנט המכיל אותו */
+}
+
+
+/* Divider styling */
+.divider {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 90%;
+    background-color: #e0e0e0;
+}
+
+/* Contact info styling */
+.contact-info {
+    flex: 0 0 350px;
+    padding-left: 60px;
+    
+}
+
+.contact-info h3 {
+    color: #626286;
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-info p:first-of-type {
+    color: #626286;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.contact-info p strong {
+    display: block;
+    color: #626286;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Social icons styling */
+.social-icons {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 20px;
+    color: #1a237e;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Input focus styles */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #1a237e;
+}
+
+/* הגדרת אייקונים חברתיים */
+.social-icons a {
+  display: inline-block;
+  margin-right: 20px;
+  color: #1a237e; /* צבע ברירת המחדל של האייקונים */
+  font-size: 24px; /* גודל ברירת המחדל של האייקונים */
+  transition: color 0.3s ease; /* אנימציה חלקה בצבע */
+}
+
+/* צבע חדש בעת ריחוף על האייקון */
+.social-icons a:hover {
+  color: #040a04; /* צבע ירוק בעת ריחוף */
+}
+
+/* התאמת גודל האייקונים */
+.social-icons ion-icon {
+  font-size: 25px; /* ניתן לשנות את הגודל כאן */
+}
+
+/* התאמות למסכים קטנים */
+@media (max-width: 768px) {
+  .contact-container {
+      flex-direction: column; /* סידור בעמודה במסכים קטנים */
+      align-items: center; /* יישור למרכז */
+  }
+
+  .contact-form, .contact-info {
+      flex: 0 0 100%; /* כל אלמנט יתפוס 100% רוחב */
+      padding: 0;
+      margin-bottom: 30px; /* מרווח בין החלקים */
+  }
+
+  .divider {
+      display: none; /* ביטול הקו המפריד במסכים קטנים */
+  }
+
+  .contact-form button {
+      padding: 15px; /* התאמת גודל הכפתור */
+  }
+
+  .social-icons ion-icon {
+      font-size: 22px; /* גודל קטן יותר לאייקונים */
+  }
+
+  .contact-info h3 {
+      font-size: 24px; /* כותרת קטנה יותר */
+  }
+
+  .contact-info p {
+      font-size: 14px; /* טקסט קטן יותר */
+  }
+}
+
+.footer {
+  background-color: #ffffff;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 12px;
+  position: static;
+  width: 100%;
+}
+  
+  
