@@ -116,40 +116,50 @@
 }
 
 
-/* About Me Section */
+//* About Me Section */
 .about-me-section {
-    background-color: #f9f9f9;
-  }
-  
+  background-color: #f9f9f9;
+}
+
+.about-me-section h2 {
+  color: #535370;
+  font-weight: bold;
+  font-size: 2rem;
+  display: flex; /* השתמש ב-Flexbox */
+  align-items: center; /* מרכז אנכית */
+  justify-content: center; /* מרכז אופקית */
+  text-align: center; /* מרכז את הטקסט */
+}
+
+.about-me-section h2 ion-icon {
+  font-size: 2rem; /* גודל האייקון */
+  margin-left: 8px; /* רווח בין האייקון לטקסט */
+}
+
+.about-me-section p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto; /* מרכז את הפסקה */
+}
+
+/* התאמה לנייד */
+@media (max-width: 768px) {
   .about-me-section h2 {
-    color: #535370;
-    font-weight: bold;
+    font-size: 1.5rem; /* מקטין את הכותרת למסכים קטנים */
   }
-  
+
   .about-me-section p {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.8;
+    font-size: 1rem; /* מקטין את הפסקה לנייד */
   }
 
-  h2 {
-    display: flex; /* משתמש ב-flexbox */
-    align-items: center; /* ממרכז אנכית את הטקסט והאייקון */
-    justify-content: center; /* ממרכז את כל הקבוצה אופקית */
-    text-align: center; /* מרכז את הטקסט */
+  .about-me-section h2 ion-icon {
+    font-size: 1.5rem; /* מקטין את האייקון לנייד */
+    margin-left: 5px; /* רווח קטן יותר לנייד */
   }
-  
-  ion-icon {
-    font-size: 2rem; /* מגדיר את גודל האייקון */
-    margin-left: 8px; /* מוסיף מרווח בין הטקסט לאייקון */
-  }
+}
 
-  .text-center {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 2em;
-    color: #1a1a1a;
-  }
   
   /* Timeline container */
 /* Timeline container */
